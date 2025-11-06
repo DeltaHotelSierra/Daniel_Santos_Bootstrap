@@ -14,6 +14,23 @@
     font-weight: normal;
     font-style: italic;
 }
+ 
+/* Color palette variables: dark grey background, silver neutrals, red accent, black & white */
+:root {
+    --bg: #121214;            /* very dark grey page background */
+    --card-bg: #1f1f21;       /* slightly lighter card background */
+    --silver: #c0c0c0;       /* main silver tone for text */
+    --muted-silver: #9e9e9e; /* secondary silver */
+    --accent: #e03a3a;       /* red accent */
+    --black: #000000;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 /* Reset and Base Styles */
 * {
@@ -25,14 +42,15 @@
 body {
     font-family: 'Rostex', 'Rajdhani', sans-serif;
     line-height: 1.6;
-    background-color: #f5f5f5;
+    background-color: var(--bg);
+    color: var(--silver);
 }
 
 /* Navigation Bar */
 .navbar {
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    background-color: rgba(20,20,20,0.55);
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -45,13 +63,13 @@ body {
     max-width: 1200px;
     z-index: 1000;
     border-radius: 50px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255,255,255,0.04);
     transition: all 0.3s ease;
 }
 
 .nav-brand {
-    color: black;
+    color: var(--white);
     font-size: 1.5rem;
     font-weight: bold;
     display: flex;
@@ -65,7 +83,7 @@ body {
     border-radius: 50%;
     object-fit: cover;
     object-position: top center;
-    border: 1px solid black;
+    border: 1px solid var(--muted-silver);
 }
 
 .nav-menu {
@@ -75,7 +93,7 @@ body {
 }
 
 .nav-menu li a {
-    color: black;
+    color: var(--silver);
     text-decoration: none;
     padding: 0.5rem 1rem;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -83,13 +101,14 @@ body {
 }
 
 .nav-menu li a:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(224,58,58,0.08);
+    color: var(--white);
 }
 
 /* Header Section */
 header {
-    background: rgb(255, 255, 255);
-    color: black;
+    background: linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.6));
+    color: var(--white);
     padding: 6rem 2rem 0 2rem;
     min-height: 700px;
     display: flex;
@@ -111,7 +130,7 @@ header {
     font-size: 11.2rem;
     font-weight: normal;
     font-family: 'Rostex', 'Rajdhani', sans-serif;
-    color: black;
+    color: var(--silver);
     white-space: nowrap;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -139,7 +158,7 @@ header {
 
 .info-item {
     font-size: 1rem;
-    color: black;
+    color: var(--white);
     background-color: transparent;
     padding: 0;
 }
@@ -385,19 +404,21 @@ header {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
+    background-color: transparent;
+    color: var(--silver);
     text-decoration: none;
     border-radius: 5px;
     transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255,255,255,0.06);
     position: relative;
     z-index: 1;
 }
 
 .project-card-link:hover .project-link {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(224,58,58,0.08);
+    color: var(--white);
     transform: translateX(5px);
+    border-color: var(--accent);
 }
 
 /* Project Detail Pages */
@@ -457,15 +478,59 @@ header {
     display: inline-block;
     margin-top: 2rem;
     padding: 0.75rem 1.5rem;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
+    background-color: transparent;
+    color: var(--silver);
     text-decoration: none;
     border-radius: 5px;
     transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Logo loop (About section) */
+.logo-loop {
+    margin-top: 2rem;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 0.75rem 0;
+}
+
+.logo-track {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+    will-change: transform;
+    animation: scroll-logos 24s linear infinite;
+}
+
+.tech-logo {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    filter: grayscale(0%) brightness(1);
+    opacity: 0.95;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.tech-logo:hover {
+    transform: scale(1.08);
+    opacity: 1;
+}
+
+@keyframes scroll-logos {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* make the loop slower on small screens */
+@media (max-width: 768px) {
+    .logo-track { animation-duration: 36s; gap: 1.5rem; }
+    .tech-logo { width: 44px; height: 44px; }
 }
 
 .back-button:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(224,58,58,0.08);
+    color: var(--white);
     transform: translateX(-5px);
+    border-color: var(--accent);
 }
