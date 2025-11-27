@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+  <!-- Head -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daniel Santos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to external CSS -->
+    <!-- Bootstrap 5 JS (before custom script) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js" defer></script>
+    <!-- Link to external JavaScript -->
+  </head>
+
+  <body>
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#top">
+          <img
+            src="assets/png/profile.png"
+            alt="Daniel Santos"
+            class="nav-profile-pic rounded-circle img-fluid"
+            width="40"
+            height="40"
+          />
+          <span class="fw-bold text-uppercase">Daniel Santos</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#top">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header id="top">
+      <div class="banner-container" style="width: 100%; text-align: center;">
+        <div class="name-banner" style="animation: none; transform: none;">Daniel Santos</div>
+      </div>
+      <div class="profile-image">
+        <img src="assets/png/profile.png" alt="Daniel Santos" class="img-fluid rounded-circle shadow" />
+      </div>
+    </header>
+
+    <section class="about-section shadow-lg rounded mt-5 mb-5" id="about">
+      <div class="container p-4 p-md-5">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="text-center mb-5">About Me</h2>
+            <div class="col-12">
+        <p class="text-center mb-4 lh-lg">
+          👋 I'm an aspiring cybersecurity student with a military background
+          and a passion for coding, ethical hacking, and digital defense.
+        </p>
+        <p class="text-center mb-4 lh-lg">
+          Born in Finland and raised in New Zealand, I've learned to adapt to
+          different environments and challenges skills that have shaped my
+          approach to problem solving and leadership.
+        </p>
+        <p class="text-center mb-4 lh-lg">
+          Returning to Finland to study, I'm now focused on developing my
+          technical expertise and growing into a cybersecurity professional who
+          can lead, protect, and innovate. Outside of tech, I love the outdoors
+          scuba diving, snowboarding, and playing sports keep me grounded and
+          fuel my drive to push limits both physically and mentally.
+        </p>
+            </div>
+
+        <!-- Technical Skills Cards -->
+        <div class="skills-container mt-5">
+          <h3 class="skills-title mb-5">Technical Skills</h3>
+          <div class="row g-4">
+            
+            <!-- Card 1: Python -->
+            <div class="col-lg-3 col-md-6 mb-3">
+              <div class="skill-card shadow rounded-lg p-4">
+                <div class="skill-card-icon mb-3">
+                  <img src="assets/svg/python.svg" alt="Python" class="skill-icon-img img-fluid">
+                </div>
+                <h5 class="skill-card-title text-center mb-3">Python</h5>
+                <div class="skill-card-progress">
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <span class="skill-percentage d-block text-center mt-2">85%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: HTML, CSS & JavaScript -->
+            <div class="col-lg-3 col-md-6">
+              <div class="skill-card shadow rounded-lg p-4 mb-3">
+                <div class="skill-card-icon mb-3">
+                  <div class="skill-multi-icons">
+                    <img src="assets/svg/html.svg" alt="HTML5" class="skill-icon-small">
+                    <img src="assets/svg/css.svg" alt="CSS3" class="skill-icon-small">
+                    <img src="assets/svg/javascript.svg" alt="JavaScript" class="skill-icon-small">
+                  </div>
+                </div>
+                <h5 class="skill-card-title text-center mb-3">HTML, CSS & JS</h5>
+                <div class="skill-card-progress multi-skill">
+                  <div class="skill-row">
+                    <label class="fw-bold small">HTML</label>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span class="skill-percentage">90%</span>
+                  </div>
+                  <div class="skill-row">
+                    <label class="fw-bold small">CSS</label>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span class="skill-percentage">90%</span>
+                  </div>
+                  <div class="skill-row">
+                    <label class="fw-bold small">JavaScript</label>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <span class="skill-percentage">75%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: GitHub -->
+            <div class="col-lg-3 col-md-6">
+              <div class="skill-card shadow rounded-lg p-4 mb-3">
+                <div class="skill-card-icon mb-3">
+                  <img src="assets/svg/github.svg" alt="GitHub" class="skill-icon-img white-icon">
+                </div>
+                <h5 class="skill-card-title text-center mb-3">GitHub</h5>
+                <div class="skill-card-progress">
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <span class="skill-percentage d-block text-center mt-2">80%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4: Kali Linux -->
+            <div class="col-lg-3 col-md-6">
+              <div class="skill-card shadow rounded-lg p-4 mb-3">
+                <div class="skill-card-icon mb-3">
+                  <img src="assets/svg/kali.svg" alt="Kali Linux" class="skill-icon-img white-icon">
+                </div>
+                <h5 class="skill-card-title text-center mb-3">Kali Linux</h5>
+                <div class="skill-card-progress">
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <span class="skill-percentage d-block text-center mt-2">80%</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-section shadow-lg rounded mt-5 mb-5" id="projects">
+      <div class="container p-4 p-md-5">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="display-4 mb-4">Projects</h2>
+            <p class="lead text-muted fs-5">
+              Here are some of the exciting projects I've worked on. Each one
+              represents a unique challenge and an opportunity to create something
+              meaningful.
+            </p>
+          </div>
+        </div>
+        <div class="row g-4 mt-3 justify-content-center">
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <a href="leadership-experience.html" class="project-card-link d-block h-100 text-decoration-none">
+              <div class="project-card h-100 shadow rounded-lg p-5">
+                <h3 class="mb-3 text-white">Leadership Experience</h3>
+                <p class="text-light lh-lg">
+                  My military background and the leadership skills I've developed
+                  that translate into cybersecurity.
+                </p>
+                <span class="project-link d-inline-block mt-3">Learn More →</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+            <a href="kali-linux-learning.html" class="project-card-link d-block h-100 text-decoration-none">
+              <div class="project-card h-100 shadow rounded-lg p-5">
+                <h3 class="mb-3 text-white">Kali Linux Learning</h3>
+                <p class="text-light lh-lg">
+                  My journey into ethical hacking and penetration testing with
+                  Kali Linux tools and techniques.
+                </p>
+                <span class="project-link d-inline-block mt-3">Learn More →</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials-section shadow-lg rounded mt-5 mb-5" id="testimonials">
+      <div class="container p-4 p-md-5">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="display-4 mb-4">Testimonials</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+              <!-- Carousel Indicators -->
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Testimonial 1"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Testimonial 2"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Testimonial 3"></button>
+              </div>
+
+              <!-- Carousel Items -->
+              <div class="carousel-inner">
+                <!-- Testimonial 1 -->
+                <div class="carousel-item active">
+                  <div class="testimonial-card shadow rounded-lg p-5 mb-4">
+                    <div class="testimonial-text mb-4">
+                      <p class="fs-5 lh-lg">Daniel is an exceptional problem-solver with a keen eye for security details. His dedication to ethical hacking and cybersecurity is unmatched.</p>
+                    </div>
+                    <div class="testimonial-author text-center">
+                      <h5 class="fw-bold mb-2">Jane Doe</h5>
+                      <p class="testimonial-role text-muted small">Cybersecurity Mentor</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="carousel-item">
+                  <div class="testimonial-card shadow rounded-lg p-5 mb-4">
+                    <div class="testimonial-text mb-4">
+                      <p class="fs-5 lh-lg">Working with Daniel on penetration testing projects has been fantastic. His technical skills combined with his military discipline create a professional approach to security challenges.</p>
+                    </div>
+                    <div class="testimonial-author text-center">
+                      <h5 class="fw-bold mb-2">John Smith</h5>
+                      <p class="testimonial-role text-muted small">Project Lead</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="carousel-item">
+                  <div class="testimonial-card shadow rounded-lg p-5 mb-4">
+                    <div class="testimonial-text mb-4">
+                      <p class="fs-5 lh-lg">Daniel's commitment to learning and his ability to communicate complex security concepts clearly make him a valuable team member. Highly recommended!</p>
+                    </div>
+                    <div class="testimonial-author text-center">
+                      <h5 class="fw-bold mb-2">Sarah Johnson</h5>
+                      <p class="testimonial-role text-muted small">Technical Director</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Carousel Controls -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section shadow-lg rounded mt-5 mb-5" id="contact">
+      <div class="container p-4 p-md-5">
+        <div class="row">
+          <div class="col-12 text-center mb-5">
+            <h2 class="display-4 mb-4">Contact Me</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <form class="contact-form shadow rounded-lg p-5" id="contactForm">
+              <!-- Name Field -->
+              <div class="mb-4">
+                <label for="contactName" class="form-label fw-bold text-uppercase mb-2">Full Name</label>
+                <input 
+                  type="text" 
+                  class="form-control form-control-custom rounded" 
+                  id="contactName" 
+                  name="name" 
+                  placeholder="Enter your full name" 
+                  required
+                />
+              </div>
+
+              <!-- Email Field -->
+              <div class="mb-4">
+                <label for="contactEmail" class="form-label fw-bold text-uppercase mb-2">Email Address</label>
+                <input 
+                  type="email" 
+                  class="form-control form-control-custom rounded" 
+                  id="contactEmail" 
+                  name="email" 
+                  placeholder="Enter your email" 
+                  required
+                />
+              </div>
+
+              <!-- Subject Field -->
+              <div class="mb-4">
+                <label for="contactSubject" class="form-label fw-bold text-uppercase mb-2">Subject</label>
+                <input 
+                  type="text" 
+                  class="form-control form-control-custom rounded" 
+                  id="contactSubject" 
+                  name="subject" 
+                  placeholder="What is this about?" 
+                  required
+                />
+              </div>
+
+              <!-- Message Field -->
+              <div class="mb-4">
+                <label for="contactMessage" class="form-label fw-bold text-uppercase mb-2">Message</label>
+                <textarea 
+                  class="form-control form-control-custom rounded" 
+                  id="contactMessage" 
+                  name="message" 
+                  rows="6" 
+                  placeholder="Your message here..." 
+                  required
+                ></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="d-grid gap-2">
+                <button 
+                  type="submit" 
+                  class="btn btn-submit btn-lg fw-bold text-uppercase"
+                >
+                  Send Message
+                </button>
+              </div>
+
+              <!-- Form Message (hidden by default) -->
+              <div id="formMessage" class="alert mt-3 rounded" style="display: none;"></div>
+            </form>
+
+            <!-- Contact Info -->
+            <div class="contact-info mt-5 pt-4 border-top border-secondary">
+              <div class="row text-center">
+                <div class="col-md-6 mb-3 mb-md-0 p-3">
+                  <h6 class="text-uppercase fw-bold mb-3">Email</h6>
+                  <p><a href="mailto:daniel.santos@example.com" class="contact-link text-decoration-none">DannyH.Santos@Hotmail.com</a></p>
+                </div>
+                <div class="col-md-6 mb-3 mb-md-0 p-3">
+                  <h6 class="text-uppercase fw-bold mb-3">Location</h6>
+                  <p class="contact-link">Finland</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer border-top border-dark py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-4 mb-md-0 p-3">
+            <p class="footer-copyright small">&copy; 2025 Daniel Santos. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end p-3">
+            <div class="social-links d-flex justify-content-center justify-content-md-end gap-3">
+              <a href="https://github.com/DeltaHotelSierra" target="_blank" rel="noopener noreferrer" class="social-link transition" title="GitHub">
+                <img src="assets/svg/github.svg" alt="GitHub" class="social-icon img-fluid">
+              </a>
+              <a href="https://www.instagram.com/dannysantossssss/" target="_blank" rel="noopener noreferrer" class="social-link transition" title="Instagram">
+                <img src="assets/svg/instagram.svg" alt="Instagram" class="social-icon img-fluid">
+              </a>
+              <a href="https://www.linkedin.com/in/daniel-santos-568033228/" target="_blank" rel="noopener noreferrer" class="social-link transition" title="LinkedIn">
+                <img src="assets/svg/linkedin.svg" alt="LinkedIn" class="social-icon img-fluid">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
