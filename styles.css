@@ -1,3 +1,7 @@
+/* ============================================
+   CUSTOM FONTS & COLOR VARIABLES
+   ============================================ */
+
 /* Rostex Font */
 @font-face {
     font-family: 'Rostex';
@@ -18,13 +22,10 @@
     --white: #ffffff;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* ============================================
+   BASE STYLES & RESET
+   ============================================ */
 
-/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -37,6 +38,10 @@ body {
     background-color: var(--bg);
     color: var(--silver);
 }
+
+/* ============================================
+   NAVIGATION BAR
+   ============================================ */
 
 /* Bootstrap Navbar Customization */
 .custom-navbar {
@@ -148,6 +153,7 @@ header {
     overflow: visible;
 }
 
+/* Banner container for name text */
 .banner-container {
     position: absolute;
     display: flex;
@@ -159,6 +165,7 @@ header {
     padding: 0 2rem;
 }
 
+/* Hero name banner with responsive typography */
 .name-banner {
     font-weight: normal;
     font-family: 'Rostex', 'Rajdhani', sans-serif;
@@ -181,6 +188,7 @@ header {
     }
 }
 
+/* Header info positioned at bottom left */
 .header-info {
     position: absolute;
     bottom: 2rem;
@@ -198,6 +206,7 @@ header {
     padding: 0;
 }
 
+/* Profile image positioned at bottom center */
 .profile-image {
     position: absolute;
     z-index: 2;
@@ -220,6 +229,10 @@ header {
     display: block;
     border-radius: 50%;
 }
+
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
 
 /* About Section */
 .about-section {
@@ -258,6 +271,10 @@ header {
     font-weight: 400;
 }
 
+/* ============================================
+   TECHNICAL SKILLS SECTION
+   ============================================ */
+
 /* Skills Section */
 .skills-container {
     margin-top: 3rem;
@@ -278,7 +295,7 @@ header {
     margin-bottom: 2rem;
 }
 
-/* Skill Cards */
+/* Individual Skill Cards */
 .skill-card {
     background-color: rgba(31, 31, 33, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -498,6 +515,10 @@ header {
     font-family: 'Orbitron', sans-serif;
 }
 
+/* ============================================
+   PROJECTS SECTION
+   ============================================ */
+
 /* Projects Section */
 .projects-section {
     background-color: white;
@@ -536,6 +557,7 @@ header {
     font-family: 'Trebuchet MS', sans-serif;
 }
 
+/* Project Cards */
 .project-card-link {
     text-decoration: none;
     color: inherit;
@@ -587,6 +609,10 @@ header {
     font-family: 'Trebuchet MS', sans-serif;
 }
 
+/* ============================================
+   TESTIMONIALS SECTION
+   ============================================ */
+
 /* Testimonials Section */
 .testimonials-section {
     background-color: black;
@@ -613,6 +639,7 @@ header {
     font-family: 'Trebuchet MS', sans-serif;
 }
 
+/* Individual Testimonial Cards */
 .testimonial-card {
     background-color: var(--card-bg);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -702,6 +729,10 @@ header {
     opacity: 1;
 }
 
+/* ============================================
+   CONTACT SECTION & FORM
+   ============================================ */
+
 /* Contact Section */
 .contact-section {
     background-color: black;
@@ -739,7 +770,7 @@ header {
     font-family: 'Trebuchet MS', sans-serif;
 }
 
-/* Contact Form Styling */
+/* Form Fields */
 .contact-form {
     background-color: rgba(255, 255, 255, 0.03);
     padding: 2.5rem;
@@ -781,6 +812,7 @@ header {
     font-style: italic;
 }
 
+/* Submit Button */
 .btn-submit {
     background-color: var(--accent);
     color: var(--white);
@@ -1081,6 +1113,10 @@ header {
     border-color: var(--accent);
 }
 
+/* ============================================
+   FOOTER
+   ============================================ */
+
 /* Footer */
 footer.footer {
     background-color: rgba(0, 0, 0, 0.8);
@@ -1097,6 +1133,7 @@ footer.footer {
     color: var(--muted-silver);
 }
 
+/* Social Media Links */
 .social-links {
     display: flex;
     gap: 2rem;
@@ -1129,3 +1166,7 @@ footer.footer {
     object-fit: contain;
     filter: brightness(0) invert(1);
 }
+
+/* ============================================
+   RESPONSIVE DESIGN & MEDIA QUERIES
+   ============================================ */
