@@ -2,31 +2,23 @@
     // Navbar Collapse on Link Click
     // ============================================
     
-    // Wait for DOM to be fully loaded
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initNavbarCollapse);
-    } else {
-        initNavbarCollapse();
-    }
-
-    function initNavbarCollapse() {
+    document.addEventListener('DOMContentLoaded', function() {
+        const navbarToggler = document.querySelector('.navbar-toggler');
         const navbarCollapse = document.querySelector('.navbar-collapse');
         const navLinks = document.querySelectorAll('.nav-link');
 
-        // Close navbar menu when a nav link is clicked
+        // Close navbar when a nav link is clicked
         navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                // Check if the navbar is currently expanded
-                if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-                    // Use Bootstrap's collapse API to properly close the navbar
-                    const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-                        toggle: false
-                    });
-                    bsCollapse.hide();
+            link.addEventListener('click', function() {
+                // Only close if navbar is open
+                if (navbarCollapse.classList.contains('show')) {
+                    // Toggle the navbar to close it
+                    navbarToggler.classList.toggle('collapsed');
+                    navbarCollapse.classList.remove('show');
                 }
             });
         });
-    }
+    });
 
     // ============================================
     // Contact Form Handling
